@@ -1,0 +1,291 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: #292929;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px 120px;
+    height: 100vh;
+    background-image: url(images/header_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+.header__top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__title{
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: -1.5px;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 1000ms;
+    padding: 64px 120px;
+    background-color: #E8EFF9;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.menu:target{
+    transform: translateX(-0%);
+}
+
+.menu__top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.nav__link{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #292929;
+}
+
+.main{
+    padding: 120px;
+    background-color: #fff;
+}
+
+.recommended{
+    margin-bottom: 120px;
+}
+
+.recommended__products{
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.product{
+    flex-basis: 324px;
+}
+
+.product__img{
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.product__title{
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.product__category{
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.product__price{
+    font-weight: 700;
+    margin: 0;
+}
+
+.recommended__title, 
+.categories__title{
+    margin-top: 0;
+    margin-bottom: 64px;
+    font-size: 48px;
+    line-height: 100%;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    text-align: center;
+}
+
+.how-to-buy__title{
+    margin-top: 0;
+    margin-bottom: 64px;
+    font-size: 48px;
+    line-height: 100%;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    flex-basis: 50%;
+}
+
+.categories{
+    max-width: 1020px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.category{
+   margin-bottom: 64px;
+}
+
+.category__images{
+    display: flex;
+    gap: 3%;
+    margin-bottom: 16px;
+}
+
+.category__title{
+    margin: 0;
+}
+
+.images__wide{
+    width: 65%;
+    object-fit: cover;
+}
+
+.images__square{
+    width: 32%;
+}
+
+.how-to-buy{
+    display: flex;
+    gap: 24px;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.how-to-buy__content{
+    flex-basis: 50%;
+}
+
+.how-to-buy__items{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.footer{
+    background-image: url(images/footer-bg.png);
+    height: 460px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+    position: sticky;
+    bottom: 0;
+    z-index: -1;
+}
+
+.logo{
+    height: 24px;
+}
+
+
+@media (max-width: 1024px){
+    .header{
+        padding: 64px 72px;
+        background-image: url(images/header_bg-tablet.jpg);
+    }
+
+    .header__title{
+        font-size: 40px;
+    }
+
+    .recommended__products{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recommended__title,
+    .categories__title,
+    .how-to-buy__title{
+        font-size: 40px;
+    }
+    
+    .main{
+        padding: 120px 72px;
+    }
+
+}
+
+
+
+
+
+@media (max-width: 576px){
+    .header{
+        padding: 32px 20px;
+        background-image: url(images/header_bg-phone.jpg);
+        background-position: 0 0;
+    }
+
+    .header__title{
+        font-size: 32px;
+    }
+
+    .logo{
+        height: 16px;
+    }
+
+    .recommended__products{
+        align-items: stretch;
+    }
+
+    .main{
+        padding: 120px 20px;
+    }
+
+    .images__wide{
+        width: 48.5%;
+        object-fit: cover;
+    }
+
+    .images__square{
+        width: 48.5%;
+        object-fit: cover;
+    }
+
+    .how-to-buy{
+        display: block;
+    }
+
+    .recommended__title,
+    .categories__title,
+    .how-to-buy__title{
+        font-size: 32px;
+    }
+    
+    .category{
+        margin-bottom: 40px;
+    }
+
+    .menu{
+        padding: 36px 20px;
+    }
+}
